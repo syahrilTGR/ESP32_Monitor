@@ -1,6 +1,6 @@
 # esp32_monitor
 
-A new Flutter project.
+A new Flutter project. App to monitoring several Dummy data from ESP32 in this [Repo](https://github.com/syahrilTGR/hijack-iot/tree/main/dummy-wifi)
 
 ## Getting Started
 
