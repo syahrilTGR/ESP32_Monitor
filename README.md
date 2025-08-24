@@ -1,27 +1,28 @@
 # esp32_monitor
 
-A Flutter application for monitoring dummy sensor data from an ESP32 device via Bluetooth and WebSocket.
+A Flutter application for monitoring dummy sensor data from an ESP32 device via Wi-Fi Access Point (AP) mode and WebSocket.
 
 ## Overview
 
 This project consists of:
-- **Flutter mobile app**: Connects to ESP32 via Bluetooth Classic, sends WiFi credentials, requests IP address, and receives real-time sensor data via WebSocket.
+- **Flutter mobile app**: Connects to ESP32 via Wi-Fi AP mode, sends WiFi credentials, requests IP address, and receives real-time sensor data via WebSocket.
 - **ESP32 firmware**: Receives WiFi credentials via Bluetooth, connects to WiFi, starts a WebSocket server, and sends dummy sensor data (location, temperature, emergency status).
 
 ### Main Features
 
-- Scan and connect to ESP32 via Bluetooth.
+- Scan and connect to ESP32 via Wi-Fi AP mode.
 - Send WiFi SSID and password to ESP32.
 - Request ESP32 IP address.
 - Remotely reset ESP32.
 - Display ESP32 WiFi connection status.
 - Show/hide password input for convenience.
 - Display real-time sensor data from ESP32 via WebSocket.
+- Display sensor data on a map with terrain style.
 
 ### How It Works
 
-1. **Bluetooth**:  
-   - The app connects to ESP32 and sends WiFi credentials.
+1. **Wi-Fi AP Mode**:  
+   - The app connects to the ESP32's Wi-Fi Access Point and sends WiFi credentials.
    - ESP32 connects to WiFi and replies with connection status and IP address.
 2. **WebSocket**:  
    - The app connects to ESP32's WebSocket server using the received IP address.
@@ -34,6 +35,11 @@ This project consists of:
 - Body temperature
 - Emergency status (random)
 - Timestamp
+
+### Map Features
+
+- Displays the current location of the ESP32 on a map.
+- Uses terrain map style for better visualization.
 
 ## ESP32 Dummy Firmware
 
